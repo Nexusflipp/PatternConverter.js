@@ -7,8 +7,7 @@
     <a href="#" target="_blank"> <img src="https://img.shields.io/github/issues/Nexusflipp/PatternConverter.js"/> </a>
     <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/top/Nexusflipp/PatternConverter.js"/> </a> 
     <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/count/Nexusflipp/PatternConverter.js"/> </a> 
-    <a href="#" target="_blank"> <img src="https://img.shields.io/github/last-commit/Nexusflipp/PatternConverter.js"/> </a> 
-    <a href="#" target="_blank"> <img src="https://img.shields.io/github/repo-size/Nexusflipp/PatternConverter.js"/> </a> 
+    <a href="#" target="_blank"> <img src="https://img.shields.io/github/last-commit/Nexusflipp/PatternConverter.js"/> </a>  
     <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/code-size/Nexusflipp/PatternConverter.js"/> </a> 
 </p>
 
