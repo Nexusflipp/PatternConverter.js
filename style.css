@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@400;500&display=swap');
+
+body
+{
+  font-family: 'Roboto', sans-serif;
+  background-color: #000000;
+  color: #fff;
+}
+
+textarea
+{
+  font-family: 'Roboto', sans-serif;
+  background-color: #000000;
+  color: #fff;
+  resize: none;
+  height: 72px;
+  width: 367px;
+}
+
+.out
+{
+  border: 0.5px solid #fff;
+  height: 72px;
+  width: 372px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.console
+{
+  border: 0.5px solid #fff;
+  width: 372px;
+  height: 190px;
+  overflow-y: scroll;
+}
+
+.btn
+{
+  background-color: #000000;
+  color: #fff;
+}
+
+select
+{
+	background-color: #000000;
+	margin-top: 5px;
+	color: #FFFFFF;
+}

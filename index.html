@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pattern Converter</title>
+		<meta charset="utf-8">
+		<meta name="description" content="Easily convert byte patterns!">
+		<meta name="author" content="Nexu$flipp">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div>
+      <h1>IDA To Code</h1>
+      <input type="checkbox" id="debug" name="debug" value="yes/no">
+      <label for="double">Debug logs</label><br>
+      <input type="checkbox" id="mask" name="mask" value="yes/no" checked>
+      <label for="double">Generate mask</label><br>
+      <input type="checkbox" id="white" name="no whitespaces" value="yes/no">
+      <label for="white">Without whitespace</label><br>
+      <select id="dropdown">
+        <option value="normal" selected>Normal Mode</option>
+        <option value="double?">Double ? Mode</option>
+        <option value="asterisk">Asterisk Mode</option>
+        <option value="double*">Double * Mode</option>
+      </select>
+      <br>
+      <textarea oninput='ToCode()' id="inida"  name="input" rows="4" cols="50" placeholder="Paste Ida Pattern Here:"></textarea>
+      <div id="outcode" class="out"></div>
+      <div id="outmask" class="out" style="display: none;"></div>
+    </div>
+    <hr style="margin-top: 2em;">
+    <div>
+      <h1>Code to IDA</h1>
+      <input type="checkbox" id="debug2" name="debug" value="yes/no">
+      <label for="double">Debug logs</label><br>
+      <input type="checkbox" id="white2" name="no whitespaces" value="yes/no">
+      <label for="white2">Without whitespace</label><br>
+      <select id="dropdown2">
+        <option value="normal" selected>Normal Mode</option>
+        <option value="double?">Double ? Mode</option>
+        <option value="asterisk">Asterisk Mode</option>
+        <option value="double*">Double * Mode</option>
+      </select>
+      <br>
+      <textarea oninput='ToIda()' id="incode" name="input" rows="4" cols="50" placeholder="Paste Code Pattern Here:"></textarea>
+      <div id="outida" class="out"></div>
+    </div>
+    <hr style="margin-top: 2em;">
+    <div>
+      <h1>Console</h1>
+      <button class="btn" onClick='none()'>TEST ERROR</button>
+      <button class="btn" onClick='TestLog()'>TEST LOGGER</button>
+      <button class="btn" onClick='ClearConsole()'>CLEAR CONSOLE</button>
+      <pre class="console"><code id="c"></code></pre>
+    </div>
+    <script src="patternconverter.js"></script>
+  </body>
+</html>
