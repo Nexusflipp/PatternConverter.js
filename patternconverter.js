@@ -66,7 +66,7 @@ function ToCode()
                 Mask.style.display = 'block';
         
                 var outmask = codePattern.slice();
-                outmask = outmask.replace(/\b(?!\u003f)\b\S+/g, "x");                                                   //  replace every word with x, except all starting with ?
+                outmask = outmask.replace(/\b(?!\u003f)\b\S+/g, "x");                                           //  replace every word with x, except all starting with ?
 
                 if (codePattern.length != 0)
                     codePattern = codePattern.split(' ').map(s => '\u005cx' + s).join(' ');
@@ -79,7 +79,7 @@ function ToCode()
                 //  pattern
                 codePattern = codePattern.replace(/\u003f/g, '00');
 
-                codePattern = codePattern.replace(/\s/g, '');                                                           //  remove every space
+                codePattern = codePattern.replace(/\s/g, '');                                                   //  remove every space
                 outpat.textContent = codePattern;
 
                 if (Elements.Debug.checked && outpat.length != 0) 
@@ -98,7 +98,7 @@ function ToCode()
 
                 codePattern = codePattern.replace(/\u003f/g, '00');                                                 //  replace every ? with 00
 
-                codePattern = codePattern.replace(/\s/g, '');                                                           //  remove every space
+                codePattern = codePattern.replace(/\s/g, '');                                                       //  remove every space
             
                 //  I use textContent here to prevent XSS attacks
                 outpat.textContent = codePattern;
@@ -112,7 +112,7 @@ function ToCode()
         case "double?":
         {
             if (Elements.CheckBoxW.checked)
-                codePattern = codePattern.replace(/[^\dA-Z\u003f]/g, '').replace(/(.{2})/g, '$1 ').trim();      //  insert a space each 2 characters in our list
+                codePattern = codePattern.replace(/[^\dA-Z\u003f]/g, '').replace(/(.{2})/g, '$1 ').trim();          //  insert a space each 2 characters in our list
 
             if (Elements.CheckBoxM.checked) 
             {
@@ -120,21 +120,21 @@ function ToCode()
                 Mask.style.display = 'block';
         
                 var outmask = codePattern.slice();
-                outmask = outmask.replace(/\b(?!\u003f)\b\S+/g, "x");                                                   //  replace every word with x, except all starting with ?
+                outmask = outmask.replace(/\b(?!\u003f)\b\S+/g, "x");                                               //  replace every word with x, except all starting with ?
 
                 if (codePattern.length != 0)
                     codePattern = codePattern.split(' ').map(s => '\u005cx' + s).join(' ');
 
                 //  mask
-                outmask= outmask.replace(/\u003f\u003f/g, "\u003f");                                            //  replace very ?? with ?
-                outmask = outmask.replace(/\s/g, '');                                                           //  remove all spaces
+                outmask= outmask.replace(/\u003f\u003f/g, "\u003f");                                                //  replace very ?? with ?
+                outmask = outmask.replace(/\s/g, '');                                                               //  remove all spaces
                 //  I use textContent here to prevent XSS attacks
                 Mask.textContent = outmask; 
 
                 //  pattern
                 codePattern = codePattern.replace(/\u003f\u003f/g, "00"); 
 
-                codePattern = codePattern.replace(/\s/g, '');                                                           //  remove every space
+                codePattern = codePattern.replace(/\s/g, '');                                                       //  remove every space
                 outpat.textContent = codePattern;
 
                 if (Elements.Debug.checked && outpat.length != 0) 
@@ -153,7 +153,7 @@ function ToCode()
 
                 codePattern = codePattern.replace(/\u003f\u003f/g, "00"); 
 
-                codePattern = codePattern.replace(/\s/g, '');                                                           //  remove every space
+                codePattern = codePattern.replace(/\s/g, '');                                                       //  remove every space
 
                 //  I use textContent here to prevent XSS attacks
                 outpat.textContent = codePattern;
@@ -168,9 +168,9 @@ function ToCode()
         {
             if (Elements.CheckBoxW.checked)
             {
-                codePattern = codePattern.replace(/\u002a/g, "\u002a\u002a");                                   //  replace every ? with ??
-                codePattern = codePattern.replace(/[^\dA-Z\u002a]/g, '').replace(/(.{2})/g, '$1 ').trim();      //  insert a space each 2 characters in our list
-                codePattern = codePattern.replace(/\u002a\u002a/g, "\u002a");                                   //  replace very ?? with ?
+                codePattern = codePattern.replace(/\u002a/g, "\u002a\u002a");                                       //  replace every ? with ??
+                codePattern = codePattern.replace(/[^\dA-Z\u002a]/g, '').replace(/(.{2})/g, '$1 ').trim();          //  insert a space each 2 characters in our list
+                codePattern = codePattern.replace(/\u002a\u002a/g, "\u002a");                                       //  replace very ?? with ?
             }
 
             if (Elements.CheckBoxM.checked) 
@@ -179,7 +179,7 @@ function ToCode()
                 Mask.style.display = 'block';
         
                 var outmask = codePattern.slice();
-                outmask = outmask.replace(/\b(?!\u002a)\b\S+/g, "x");                                                   //  replace every word with x, except all starting with ?
+                outmask = outmask.replace(/\b(?!\u002a)\b\S+/g, "x");                                               //  replace every word with x, except all starting with ?
 
                 if (codePattern.length != 0)
                     codePattern = codePattern.split(' ').map(s => '\u005cx' + s).join(' ');
@@ -187,14 +187,14 @@ function ToCode()
                 outmask = outmask.replace(/\*/g, "?");
 
                     //  mask
-                outmask = outmask.replace(/\s/g, '');                                                           //  remove every space
+                outmask = outmask.replace(/\s/g, '');                                                               //  remove every space
                 //  I use textContent here to prevent XSS attacks
                 Mask.textContent = outmask; 
 
                 //  pattern
                 codePattern = codePattern.replace(/\u002a/g, '00');
 
-                codePattern = codePattern.replace(/\s/g, '');                                                           //  remove every space
+                codePattern = codePattern.replace(/\s/g, '');                                                       //  remove every space
                 outpat.textContent = codePattern;
 
                 if (Elements.Debug.checked && outpat.length != 0) 
@@ -211,7 +211,7 @@ function ToCode()
                 if (codePattern.length != 0)
                     codePattern = codePattern.split(' ').map(s => '\u005cx' + s).join(' ');
 
-                codePattern = codePattern.replace(/\u002a/g, '00');                                                 //  replace every ? with 00
+                codePattern = codePattern.replace(/\u002a/g, '00');                                                     //  replace every ? with 00
 
                 codePattern = codePattern.replace(/\s/g, '');                                                           //  remove every space
             
@@ -227,7 +227,7 @@ function ToCode()
         case "double*":
         {
             if (Elements.CheckBoxW.checked)
-                codePattern = codePattern.replace(/[^\dA-Z\u002a]/g, '').replace(/(.{2})/g, '$1 ').trim();      //  insert a space each 2 characters in our list
+                codePattern = codePattern.replace(/[^\dA-Z\u002a]/g, '').replace(/(.{2})/g, '$1 ').trim();              //  insert a space each 2 characters in our list
 
             if (Elements.CheckBoxM.checked) 
             {
@@ -241,8 +241,8 @@ function ToCode()
                     codePattern = codePattern.split(' ').map(s => '\u005cx' + s).join(' ');
 
                 //  mask
-                outmask = outmask.replace(/\u002a\u002a/g, "\u003f");                                            //  replace very ** with ?
-                outmask = outmask.replace(/\s/g, '');                                                           //  remove all spaces
+                outmask = outmask.replace(/\u002a\u002a/g, "\u003f");                                                   //  replace very ** with ?
+                outmask = outmask.replace(/\s/g, '');                                                                   //  remove all spaces
                 //  I use textContent here to prevent XSS attacks
                 Mask.textContent = outmask; 
 
