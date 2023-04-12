@@ -3,7 +3,7 @@
 <br>
 
 <p align="center"> 
-     <a href="#" target="_blank"> <img src="https://img.shields.io/tokei/lines/github/Nexusflipp/PatternConverter.js"/> </a>
+    <a href="#" target="_blank"> <img src="https://img.shields.io/github/stars/Nexusflipp/PatternConverter.js?style=social"/> </a>
     <a href="#" target="_blank"> <img src="https://img.shields.io/github/issues/Nexusflipp/PatternConverter.js"/> </a>
     <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/top/Nexusflipp/PatternConverter.js"/> </a> 
     <a href="#" target="_blank"> <img src="https://img.shields.io/github/languages/count/Nexusflipp/PatternConverter.js"/> </a> 
