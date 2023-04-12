@@ -26,7 +26,6 @@ For bug reports or code improvements dm me: <a href="https://nexusflipp.dev/cont
   <li>Toggle console debug messages.</li>
   <li>Toggle mask generation.</li>
 </ul>
-<br>
 
 ## Credits
 <ul>
