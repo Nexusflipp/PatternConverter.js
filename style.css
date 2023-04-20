@@ -15,6 +15,7 @@ textarea
   resize: none;
   height: 72px;
   width: 367px;
+  overflow-y: auto;
 }
 
 .out
@@ -24,6 +25,9 @@ textarea
   width: 372px;
   margin-top: 5px;
   margin-bottom: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: auto;
 }
 
 .console
@@ -31,7 +35,7 @@ textarea
   border: 0.5px solid #fff;
   width: 372px;
   height: 190px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .btn
