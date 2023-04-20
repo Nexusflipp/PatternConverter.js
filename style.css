@@ -35,7 +35,7 @@ textarea
   border: 0.5px solid #fff;
   width: 372px;
   height: 190px;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .btn
